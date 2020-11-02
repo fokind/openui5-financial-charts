@@ -1,0 +1,20 @@
+{
+  "name": "openui5-financial-charts-demo",
+  "version": "1.0.0",
+  "description": "OpenUI5 Financial Charts based on d3.js",
+  "author": {
+    "name": "Dmitry Fokin"
+  },
+  "license": "MIT",
+  "private": false,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified. Please add some.\" && exit 1",
+    "start": "node .",
+    "build": "ui5 build"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
