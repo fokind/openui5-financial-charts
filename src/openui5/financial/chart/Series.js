@@ -54,14 +54,28 @@ sap.ui.define(
             },
 
             _getMin: function () {
-                var aItems = this.getItems();
+                var oParent = this.getParent();
+                var sBegin = oParent.getStart();
+                var sEnd = oParent.getEnd();
+                var aItems = this.getItems().filter(function (e) {
+                    var sTime = e.getTime();
+                    return sTime >= sBegin && sTime <= sEnd;
+                });
+
                 return d3.min(aItems, function (e) {
                     return e._getMin();
                 });
             },
 
             _getMax: function () {
-                var aItems = this.getItems();
+                var oParent = this.getParent();
+                var sBegin = oParent.getStart();
+                var sEnd = oParent.getEnd();
+                var aItems = this.getItems().filter(function (e) {
+                    var sTime = e.getTime();
+                    return sTime >= sBegin && sTime <= sEnd;
+                });
+
                 return d3.max(aItems, function (e) {
                     return e._getMax();
                 });
